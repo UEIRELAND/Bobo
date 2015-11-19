@@ -107,7 +107,7 @@ $userRow=mysql_fetch_array($res);
 							   <td><p>&nbsp;&nbsp;Accept taxi</p>
 							   <td ><button class= "btn btn-danger" onClick="history.go(0)">&nbsp;&nbsp;No&nbsp;&nbsp;</button></td>
 							   <td> 
-							   <a class= "btn btn-success" href="msgHome.php?user_id=<?php echo $userRow['user_id'];?>&taxi_reg={{searchText}}">Yes</a>
+							   <a class= "btn btn-success" href="msgLeaving.php?user_id=<?php echo $userRow['user_id'];?>&taxi_reg={{searchText}}">Yes</a>
 							   <!--button class= "btn btn-success">&nbsp;&nbsp;Yes&nbsp;</button--></td>
 							   
 							   </tr>
