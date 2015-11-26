@@ -99,7 +99,7 @@ $userRow=mysql_fetch_array($res);
 		
 			
 		<!--Submit button-->
-		<button onClick="home()" type="button" class="btn btn-primary btn-lg text-button">Continue</button>
+		<button <a onClick="home()" type="button" href="msgHome.php" class="btn btn-primary btn-lg text-button">Continue</a></button>
 		
 		
 	</div><!--end of jumbotron-->
