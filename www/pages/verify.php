@@ -5,9 +5,14 @@ include_once '../includes/connectDB.php';
 if(!isset($_SESSION['user']))
 {
 	header("Location: ../index.php");
-}
+}	
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
+$mydriver= $_GET['taxi_reg'];
+$myid= $_GET['user_id'];
+$myid3 = (int)$myid;
+$myid2 = mysql_real_escape_string($myid);
+mysql_query("INSERT INTO user_history(taxi_reg, user_id) VALUES('$mydriver','$myid3')") or die('you have a problem connection '.mysql_error());
 ?>
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
@@ -38,7 +43,6 @@ $userRow=mysql_fetch_array($res);
 	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 	<!-- AngularJS Link---->
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
@@ -107,7 +111,7 @@ $userRow=mysql_fetch_array($res);
 							   <td><p>&nbsp;&nbsp;Accept taxi</p>
 							   <td ><button class= "btn btn-danger" onClick="history.go(0)">&nbsp;&nbsp;No&nbsp;&nbsp;</button></td>
 							   <td> 
-							   <a class= "btn btn-success" href="msgLeaving.php?user_id=<?php echo $userRow['user_id'];?>&taxi_reg={{searchText}}">Yes</a>
+							   <a type="submit"  class= "btn btn-success" href="msgLeaving.php?user_id=<?php echo $userRow['user_id'];?>&taxi_reg={{searchText}}">Yes</a>
 							   <!--button class= "btn btn-success">&nbsp;&nbsp;Yes&nbsp;</button--></td>
 							   
 							   </tr>
@@ -121,7 +125,7 @@ $userRow=mysql_fetch_array($res);
 			</div>
 						
 			<footer class="navbar-default navbar-fixed-bottom">
-			<div class="container-fluid">
+			<div class="container-fluid"> 
 			<center>
 				<span><p>Copyright &copy; <a href="bobo15@gmail.com" title="bobo15@gmail.com">bobo15@gmail.com</a></p></span>
 			</center>
@@ -159,3 +163,4 @@ $userRow=mysql_fetch_array($res);
  
  </body>
 </html>
+
