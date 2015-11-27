@@ -1165,22 +1165,3 @@
 [Thu Nov 19 14:27:43.642344 2015] [mpm_winnt:notice] [pid 7508:tid 300] AH00418: Parent: Created child process 24308
 [Thu Nov 19 14:27:44.035005 2015] [mpm_winnt:notice] [pid 24308:tid 652] AH00354: Child: Starting 150 worker threads.
 [Thu Nov 19 21:17:41.351193 2015] [mpm_winnt:crit] [pid 24308:tid 652] AH02538: Child: Parent process exited abruptly. Child process is ending
-[Thu Nov 26 11:31:54.851587 2015] [core:warn] [pid 8060:tid 392] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
-[Thu Nov 26 11:31:54.908622 2015] [mpm_winnt:notice] [pid 8060:tid 392] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
-[Thu Nov 26 11:31:54.908622 2015] [mpm_winnt:notice] [pid 8060:tid 392] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
-[Thu Nov 26 11:31:54.908622 2015] [core:notice] [pid 8060:tid 392] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
-[Thu Nov 26 11:31:54.918629 2015] [mpm_winnt:notice] [pid 8060:tid 392] AH00418: Parent: Created child process 15204
-[Thu Nov 26 11:31:55.416962 2015] [mpm_winnt:notice] [pid 15204:tid 652] AH00354: Child: Starting 150 worker threads.
-[Thu Nov 26 11:34:43.020676 2015] [:error] [pid 15204:tid 1860] [client ::1:7940] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
-[Thu Nov 26 11:34:43.021677 2015] [:error] [pid 15204:tid 1860] [client ::1:7940] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
-[Thu Nov 26 11:34:59.743975 2015] [:error] [pid 15204:tid 1852] [client ::1:7956] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
-[Thu Nov 26 11:34:59.744975 2015] [:error] [pid 15204:tid 1852] [client ::1:7956] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
-[Thu Nov 26 11:36:21.412524 2015] [:error] [pid 15204:tid 1868] [client ::1:7976] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
-[Thu Nov 26 11:36:21.412524 2015] [:error] [pid 15204:tid 1868] [client ::1:7976] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
-[Thu Nov 26 11:44:35.314136 2015] [:error] [pid 15204:tid 1852] [client ::1:8016] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
-[Thu Nov 26 11:44:35.314136 2015] [:error] [pid 15204:tid 1852] [client ::1:8016] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
-[Thu Nov 26 13:36:32.358238 2015] [:error] [pid 15204:tid 1852] [client ::1:9349] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
-[Thu Nov 26 13:36:32.358238 2015] [:error] [pid 15204:tid 1852] [client ::1:9349] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
-[Thu Nov 26 13:46:02.063623 2015] [:error] [pid 15204:tid 1856] [client ::1:9712] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
-[Thu Nov 26 13:46:02.063623 2015] [:error] [pid 15204:tid 1856] [client ::1:9712] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
-[Thu Nov 26 19:40:58.840849 2015] [mpm_winnt:crit] [pid 15204:tid 652] AH02538: Child: Parent process exited abruptly. Child process is ending
