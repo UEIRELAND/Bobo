@@ -8,6 +8,14 @@ if(!isset($_SESSION['user']))
 }
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
+
+$mydriver= $_GET['taxi_reg'];
++$myid= $_GET['user_id'];
++$myid3 = (int)$myid;
++$myid2 = mysql_real_escape_string($myid);
++
++mysql_query("INSERT INTO user_history(taxi_reg, user_id) VALUES('$mydriver','$myid3')") or die('you have a problem connection '.mysql_error());
++
 ?>
 
 <!DOCTYPE html>
