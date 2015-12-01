@@ -19,7 +19,9 @@ if(isset($_POST['btn-signup']))
 	if(mysql_query("INSERT INTO users(fname,lname,username,email,password,DOB,phone) VALUES('$fnme','$lnme','$uname','$email','$upass','$age', '$phne')"))
 	{
 		?>
-        <script>alert('successfully registered ');</script>
+        <script>alert('successfully registered ');
+        window.location.href = "../index.php";
+        </script>
         <?php
 	}
 	else
