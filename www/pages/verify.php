@@ -28,8 +28,6 @@ $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this page -->
-
     <!-- error handling -->
 	<script src="assets/js/ie-emulation-modes-warning.js"></script>
 	
