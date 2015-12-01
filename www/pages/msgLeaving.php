@@ -31,7 +31,10 @@ $mydriver= $_GET['taxi_reg'];
     <link rel="icon" href="../images/BoboLogo.png"><!--picture on tab beside title-->
     <title>Bobo App</title>
 
-    <!-- Bootstrap core CSS -->
+    
+	<!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
     <link href="../css/text-bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="../css/text.css" rel="stylesheet">
@@ -49,70 +52,41 @@ $mydriver= $_GET['taxi_reg'];
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
-			
-			
-		<!--table of leaving alerts-->
-		<div class="table-responsive text-table-margin">          
-			<table class="table text-table table-hover text-tableOne">
-				<thead>
-					<tr>
-						<th>Leaving Alert Contacts</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><a onclick="myClickOne()">Mom</a>
-							<img id="TickOne" src="../images/text-tick.png" />
-						</td>
-					</tr>
-					<tr>
-						<td><a onclick="myClickTwo()">Dad</a>
-							<img id="TickTwo" src="../images/text-tick.png" />
-						</td>
-					</tr>
-					<tr>
-						<td><a onclick="myClickThree()">Ann</a>
-							<img id="TickThree" src="../images/text-tick.png" />
-						</td>
-					</tr>
-					<tr>
-						<td><a onclick="myClickFour()">Fran</a>
-							<img id="TickFour" src="../images/text-tick.png" />
-						</td>
-					</tr>
-					<tr>
-						<td><a onclick="myClickFive()">Daniel</a>
-							<img id="TickFive" src="../images/text-tick.png" />
-						</td>
-					</tr>
-					<tr>
-						<td><a onclick="myClickSix()">Sean</a>
-							<img id="TickSix" src="../images/text-tick.png" />
-						</td>
-					</tr>
-					<tr>
-						<td><a onclick="myClickSeven()">Youcef</a>
-							<img id="TickSeven" src="../images/text-tick.png" />
-						</td>
-					</tr>
-					<tr>
-						<td><a onclick="myClickEight()">Niamh</a>
-							<img id="TickEight" src="../images/text-tick.png" />
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+			<!--table of leaving alerts-->
+			<div class="table-responsive text-table-margin">          
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Leaving Alert</th>
+						</tr>
+					</thead>
+										<?php 
+										foreach($contacts as $contact){
+										?>
+					<tbody>
+						<tr>
+							<td>
+								<a onclick="myClickOne()">
+										<?php
+										echo  $contact['contact_name'] ; 
+										?>
+								</a>
+								<img id="TickOne" src="../images/text-tick.png" />
+							</td>
+						</tr>
+					</tbody>
+										<?php
+										}
+										?>
+				</table>
+				
+				
+			</div>
+						
+			<!--Submit button-->
+			<button type="button" class="btn btn-primary btn-lg text-button"><a href="msgHome.php">Continue</a></button>
 		
-		
-			
-		<!--Submit button-->
-		<button <a onClick="home()" type="button" href="msgHome.php" class="btn btn-primary btn-lg text-button">Continue</a></button>
-		
-		
-	</div><!--end of jumbotron-->
-
-		
+		</div><!--end of jumbotron-->
 	</div> <!-- /container -->
 
 
