@@ -7,6 +7,7 @@ if(!isset($_SESSION['user']))
 	header("Location: ../index.php");
 }	
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+
 ?>
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
@@ -103,9 +104,8 @@ $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 							   <td><p>&nbsp;&nbsp;Accept taxi</p>
 							   <td ><button class= "btn btn-danger" onClick="history.go(0)">&nbsp;&nbsp;No&nbsp;&nbsp;</button></td>
 							   <td> 
-							   <a type="submit"  class= "btn btn-success" href="msgLeaving.php?user_id=<?php echo $userRow['user_id'];?>&taxi_reg={{searchText}}">Yes</a>
-							   <!--button class= "btn btn-success">&nbsp;&nbsp;Yes&nbsp;</button--></td>
-							   
+							   <a type="submit" class= "btn btn-success" href="msgLeaving.php?user_id=<?php echo $userRow['user_id'];?>&taxi_reg={{searchText}}">Yes</a>
+							  					   
 							   </tr>
 								</table>
 				
