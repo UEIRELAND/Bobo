@@ -11,9 +11,8 @@ if(isset($_POST['btn-contact']))
 	$cnme =  mysql_real_escape_string($_POST['cnme']);
 	$cemail =  mysql_real_escape_string($_POST['cemail']);
 	$cphone = (mysql_real_escape_string($_POST['cphone']));
-	$msg = mysql_real_escape_string($_POST['msg']);
 	
-	if(mysql_query("INSERT INTO contacts(contact_name,contact_email,contact_phone,message) VALUES('$cnme','$cemail','$cphone','$msg')"))
+	if(mysql_query("INSERT INTO contacts(contact_name,contact_email,contact_phone) VALUES('$cnme','$cemail','$cphone')"))
 	{
 		?>
         <script>alert('Contact Saved ');</script>
@@ -117,9 +116,6 @@ $userRow=mysql_fetch_array($res);
 						</tr>
 						<tr>
 							<td><input type="text" name="cphone" placeholder="Contact Mobile Number" required /></td>
-						</tr>
-						<tr>
-							<td><input type="text" name="msg" placeholder="Enter Message" required /></td>
 						</tr>
 						<tr>
 							<td><button type="submit" name="btn-contact">Save Contact</button></td>

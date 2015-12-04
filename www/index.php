@@ -34,7 +34,14 @@ if(isset($_POST['btn-login']))
 	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BoBo - Login & Registration System</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<!--<link rel="stylesheet" href="css/style.css" type="text/css" />-->
+	
+	<!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="../css/homepage.css" rel="stylesheet">
+	
 </head>
 
 <body>

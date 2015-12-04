@@ -107,7 +107,7 @@ $mydriver= $_GET['taxi_reg'];
 		
 			
 		<!--Submit button-->
-		<button <a onClick="home()" type="button" href="msgHome.php" class="btn btn-primary btn-lg text-button">Continue</a></button>
+		<button <a onClick="home()" type="button" href="msgArrived.php" class="btn btn-primary btn-lg text-button">Continue</a></button>
 		
 		
 	</div><!--end of jumbotron-->
