@@ -31,7 +31,10 @@ $mydriver= $_GET['taxi_reg'];
     <link rel="icon" href="../images/BoboLogo.png"><!--picture on tab beside title-->
     <title>Bobo App</title>
 
-    <!-- Bootstrap core CSS -->
+    
+	<!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
     <link href="../css/text-bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="../css/text.css" rel="stylesheet">
@@ -49,6 +52,7 @@ $mydriver= $_GET['taxi_reg'];
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
+<<<<<<< HEAD
 			
 			
 		<!--table of leaving alerts-->
@@ -112,7 +116,43 @@ $mydriver= $_GET['taxi_reg'];
 		
 	</div><!--end of jumbotron-->
 
+=======
+			<!--table of leaving alerts-->
+			<div class="table-responsive text-table-margin">          
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Leaving Alert</th>
+						</tr>
+					</thead>
+										<?php 
+										foreach($contacts as $contact){
+										?>
+					<tbody>
+						<tr>
+							<td>
+								<a onclick="myClickOne()">
+										<?php
+										echo  $contact['contact_name'] ; 
+										?>
+								</a>
+								<img id="TickOne" src="../images/text-tick.png" />
+							</td>
+						</tr>
+					</tbody>
+										<?php
+										}
+										?>
+				</table>
+				
+				
+			</div>
+						
+			<!--Submit button-->
+			<button type="button" class="btn btn-primary btn-lg text-button"><a href="msgHome.php">Continue</a></button>
+>>>>>>> 813fed646818d1db1e6dfef6ebfca1ddbfe3cb36
 		
+		</div><!--end of jumbotron-->
 	</div> <!-- /container -->
 
 

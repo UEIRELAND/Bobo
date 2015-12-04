@@ -1312,3 +1312,11 @@
 [Fri Dec 04 14:28:44.955403 2015] [:error] [pid 9636:tid 1856] [client ::1:56956] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 106, referer: http://localhost/index.php
 [Fri Dec 04 14:28:52.192338 2015] [:error] [pid 9636:tid 1848] [client ::1:56964] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
 [Fri Dec 04 14:28:52.192338 2015] [:error] [pid 9636:tid 1848] [client ::1:56964] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/verify.php
+[Fri Dec 04 14:44:27.309431 2015] [core:warn] [pid 6100:tid 316] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 04 14:44:27.342684 2015] [mpm_winnt:notice] [pid 6100:tid 316] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
+[Fri Dec 04 14:44:27.342684 2015] [mpm_winnt:notice] [pid 6100:tid 316] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
+[Fri Dec 04 14:44:27.342684 2015] [core:notice] [pid 6100:tid 316] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
+[Fri Dec 04 14:44:27.352188 2015] [mpm_winnt:notice] [pid 6100:tid 316] AH00418: Parent: Created child process 15292
+[Fri Dec 04 14:44:27.867792 2015] [mpm_winnt:notice] [pid 15292:tid 652] AH00354: Child: Starting 150 worker threads.
+[Fri Dec 04 14:44:30.651862 2015] [:error] [pid 15292:tid 1868] [client ::1:57499] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 68
+[Fri Dec 04 14:44:30.651862 2015] [:error] [pid 15292:tid 1868] [client ::1:57499] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 106
