@@ -41,6 +41,8 @@ $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 
 	<!--Own CSS-->
 	<script src="../css/search.css"></script>
+	
+	
 </head>
 
 <body>
