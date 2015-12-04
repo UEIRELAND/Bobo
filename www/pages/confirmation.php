@@ -9,12 +9,40 @@ if(!isset($_SESSION['user']))
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
 
-$mydriver= $_GET['taxi_reg'];
-+$myid= $_GET['user_id'];
-+$myid3 = (int)$myid;
-+$myid2 = mysql_real_escape_string($myid);
-+
-+mysql_query("INSERT INTO user_history(taxi_reg, user_id) VALUES('$mydriver','$myid3')") or die('you have a problem connection '.mysql_error());
+/*
+From http://www.html-form-guide.com 
+This is the simplest emailer one can have in PHP.
+If this does not work, then the PHP email configuration is bad!
+*/
+
+
+$msg="";
+
+	$lat = $_GET['lat'];
+	$lgn = $_GET['lgn'];
+	
+	$from_add = "info@bobo.netau.net"; 
+
+	$to_add = "firminofranciele@gmail.com"; //<-- put your yahoo/gmail email address here
+
+	$subject = "Test Subject";
+	$message = "Test Message";
+	
+	$headers = "From: $from_add \r\n";
+	$headers .= "Reply-To: $from_add \r\n";
+	$headers .= "Return-Path: $from_add\r\n";
+	$headers .= "X-Mailer: PHP \r\n";
+	
+	
+	if(mail($to_add,$subject,$message,$headers)) 
+	{
+		$msg = "Mail sent OK";
+	} 
+	else 
+	{
+ 	   $msg = "Error sending email!";
+	}
+
 ?>
 
 
@@ -43,7 +71,7 @@ $mydriver= $_GET['taxi_reg'];
 	
 	<!--link to javaScript file-->
 	<script src="../javaScript/text.js"></script>
-	<script src="../javaScript/Geolocation.js"></script>
+	
 	
 </head>
 
@@ -55,41 +83,22 @@ $mydriver= $_GET['taxi_reg'];
 			<!--table of leaving alerts-->
 			<div class="table-responsive text-table-margin">          
 				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Leaving Alert</th>
-						</tr>
-					</thead>
-										<?php 
-										foreach($contacts as $contact){
-										?>
-					<tbody>
-						<tr>
-							<td>
-								<a onclick="myClickOne()">
-										<?php
-										echo  $contact['contact_name'] ; 
-										?>
-								</a>
-								<img id="TickOne" src="../images/text-tick.png" />
-							</td>
-						</tr>
-					</tbody>
-										<?php
-										}
-										?>
+				<tr><td>Just testing</td></tr>
+				<tr><td><?php echo $lgn ?></td></tr>
+				<tr><td>Just testing</td></tr>
+				
 				</table>
 				
 				
 			</div>
-						
-			<!--Submit button>
-			<button type="button" class="btn btn-primary btn-lg text-button"><a href="msgHome.php">Continue</a></button>
-			-->
-			
-           
-		
-			<button class="btn btn-primary btn-lg" onclick="getLocation()">Continue</button>
+		          
+		    <?php echo $msg ?>
+				<p>
+				<form action='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>' method='post'>
+				<input class="btn btn-primary btn-lg" type='submit' name='submit' value='Submit'>
+				</form>
+				</p>
+							
            
 		
 		</div><!--end of jumbotron-->

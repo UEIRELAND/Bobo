@@ -8,15 +8,7 @@ if(!isset($_SESSION['user']))
 }
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
-
-$mydriver= $_GET['taxi_reg'];
-+$myid= $_GET['user_id'];
-+$myid3 = (int)$myid;
-+$myid2 = mysql_real_escape_string($myid);
-+
-+mysql_query("INSERT INTO user_history(taxi_reg, user_id) VALUES('$mydriver','$myid3')") or die('you have a problem connection '.mysql_error());
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,19 +23,15 @@ $mydriver= $_GET['taxi_reg'];
     <link rel="icon" href="../images/BoboLogo.png"><!--picture on tab beside title-->
     <title>Bobo App</title>
 
-    
-	<!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
-	<!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
     <link href="../css/text-bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="../css/text.css" rel="stylesheet">
     <!-- error handling -->
-	<script src="../javaScript/ie-emulation-modes-warning.js"></script>
+	<script src="assets/js/ie-emulation-modes-warning.js"></script>
 	
 	<!--link to javaScript file-->
 	<script src="../javaScript/text.js"></script>
-	<script src="../javaScript/Geolocation.js"></script>
 	
 </head>
 
@@ -52,47 +40,69 @@ $mydriver= $_GET['taxi_reg'];
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
-			<!--table of leaving alerts-->
-			<div class="table-responsive text-table-margin">          
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Leaving Alert</th>
-						</tr>
-					</thead>
-										<?php 
-										foreach($contacts as $contact){
-										?>
-					<tbody>
-						<tr>
-							<td>
-								<a onclick="myClickOne()">
-										<?php
-										echo  $contact['contact_name'] ; 
-										?>
-								</a>
-								<img id="TickOne" src="../images/text-tick.png" />
-							</td>
-						</tr>
-					</tbody>
-										<?php
-										}
-										?>
-				</table>
-				
-				
-			</div>
-						
-			<!--Submit button>
-			<button type="button" class="btn btn-primary btn-lg text-button"><a href="msgHome.php">Continue</a></button>
-			-->
 			
-           
+			
+		<!--table of home alerts-->
+		<div>          
+			<table class="table" ng-hide="!searchText.length" style="background-color:white; opacity:1; font-weight:bold; font-size:18px">
+				<thead>
+					<tr>
+						<th>Home Alert Contacts</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a onclick="HomeOne()">Mom</a>
+							<img id="HomeTickOne" src="../images/text-tick.png" />
+						</td>
+					</tr>
+					<tr>
+						<td><a onclick="HomeTwo()">Dad</a>
+							<img id="HomeTickTwo" src="../images/text-tick.png" />
+						</td>
+					</tr>
+					<tr>
+						<td><a onclick="HomeThree()">Ann</a>
+							<img id="HomeTickThree" src="../images/text-tick.png" />
+						</td>
+					</tr>
+					<tr>
+						<td><a onclick="HomeFour()">Fran</a>
+							<img id="HomeTickFour" src="../images/text-tick.png" />
+						</td>
+					</tr>
+					<tr>
+						<td><a onclick="HomeFive()">Daniel</a>
+							<img id="HomeTickFive" src="../images/text-tick.png" />
+						</td>
+					</tr>
+					<tr>
+						<td><a onclick="HomeSix()">Sean</a>
+							<img id="HomeTickSix" src="../images/text-tick.png" />
+						</td>
+					</tr>
+					<tr>
+						<td><a onclick="HomeSeven()">Youcef</a>
+							<img id="HomeTickSeven" src="../images/text-tick.png" />
+						</td>
+					</tr>
+					<tr>
+						<td><a onclick="HomeEight()">Niamh</a>
+							<img id="HomeTickEight" src="../images/text-tick.png" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		
-			<button class="btn btn-primary btn-lg" onclick="getLocation()">Continue</button>
-           
 		
-		</div><!--end of jumbotron-->
+		<!--Submit button-->
+		<button type="button" class="btn btn-primary btn-lg text-button"><a href="verify.php">I've Arrived</a></button>
+		
+		
+	</div><!--end of jumbotron-->
+
+		
 	</div> <!-- /container -->
 
 
@@ -100,15 +110,17 @@ $mydriver= $_GET['taxi_reg'];
 	================================================= -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../dist/js/bootstrap.min.js"></script>
+	<!--script src="../dist/js/bootstrap.min.js"></script-->
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-
+	<!--script src="../assets/js/ie10-viewport-bug-workaround.js"></script-->
+	
 	<!--This is the Backstretch code which uses a jquery-->
 			<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 			<script type="text/javascript" src="../jquery/jquery.backstretch.js"></script>
 			<script type="text/javascript">
 				$.backstretch(["../images/cab.jpg"]);
 			</script>
+	
+
 </body>
 </html>
