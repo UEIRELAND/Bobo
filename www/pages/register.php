@@ -35,15 +35,19 @@ if(isset($_POST['btn-signup']))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Login & Registration System</title>
-
-	<!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this page -->
-    <link href="../css/homepage.css" rel="stylesheet">
+	<title>Login & Registration System</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="verify">
+    <meta name="author" content="Youcef">
+	<!-- homepage stylesheet css-->
+	<link rel="stylesheet" href="../css/homepage.css" type="text/css" />
+	<!-- style stylesheet css-->
+	<link rel="stylesheet" href="../css/style.css" type="text/css" />
+	<!--picture on tab beside title-->
+	<link rel="icon" href="../images/BoboLogo2.ico">
 
 </head>
 <body>
@@ -87,7 +91,7 @@ if(isset($_POST['btn-signup']))
 						<td><button type="submit" name="btn-signup">Sign Me Up</button></td>
 					</tr>
 					<tr>
-						<td><button><a href="../index.php">Sign In Here</a></button></td>
+						<td><button><a id="register" href="../index.php">Log In Here</a></button></td>
 					</tr>
 				</table>
 			</form>
