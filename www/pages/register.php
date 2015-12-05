@@ -55,47 +55,44 @@ if(isset($_POST['btn-signup']))
 				$.backstretch(["../images/cab.jpg"]);
 			</script>
 
-<center>
-<div id="login-form">
-<form method="post">
+	<center>
+		<div id="login-form">
+			<form method="post">
+				<table align="center" width="30%" border="0">
+					<tr>
+						<td><h2>Sign Up</h2></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="fnme" placeholder="First Name" required /></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="lnme" placeholder="Last Name" required /></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="uname" placeholder="User Name" required /></td>
+					</tr>
+					<tr>
+						<td><input type="email" name="email" placeholder="Your Email" required /></td>
+					</tr>
+					<tr>
+						<td><input type="password" name="upass" placeholder="Your Password" required /></td>
+					</tr>
+					<tr>
+						<td><input type="date" name="age" placeholder="DOB" required /></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="phne" placeholder="Phone number" required /></td>
+					</tr>
+					<tr>
+						<td><button type="submit" name="btn-signup">Sign Me Up</button></td>
+					</tr>
+					<tr>
+						<td><button><a href="../index.php">Sign In Here</a></button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</center>
 
-<table align="center" width="30%" border="0">
-
-<tr>
-<td><h2>Sign Up</h2></td>
-</tr>
-
-<tr>
-<td><input type="text" name="fnme" placeholder="First Name" required /></td>
-</tr>
-<tr>
-<td><input type="text" name="lnme" placeholder="Last Name" required /></td>
-</tr>
-<tr>
-<td><input type="text" name="uname" placeholder="User Name" required /></td>
-</tr>
-<tr>
-<td><input type="email" name="email" placeholder="Your Email" required /></td>
-</tr>
-<tr>
-<td><input type="password" name="upass" placeholder="Your Password" required /></td>
-</tr>
-<tr>
-<td><input type="date" name="age" placeholder="DOB" required /></td>
-</tr>
-<tr>
-<td><input type="text" name="phne" placeholder="Phone number" required /></td>
-</tr>
-<tr>
-<td><button type="submit" name="btn-signup">Sign Me Up</button></td>
-</tr>
-<tr>
-<td><button><a href="../index.php">Sign In Here</a></button></td>
-</tr>
-</div>
-</table>
-</form>
-</div>
-</center>
 </body>
 </html>
