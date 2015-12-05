@@ -1,17 +1,3 @@
-function initializeGeoLocation(){
-	navigator.geolocation.getCurrentPosition(getPosition);
-}
-						
-						
-function getPosition(position) {
-	// initialize the map
-	var map = new Microsoft.Maps.Map(document.getElementById("map"), {credentials: "AIzaSyAWRMiZPMRN1F4CkMBZK_oEtnEBZ44-8z"});
-	
-	var lat = new Microsoft.Maps.Location(position.coords.latitude);
-	var lat = new Microsoft.Maps.Location(position.coords.longitude);
-}
-
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
