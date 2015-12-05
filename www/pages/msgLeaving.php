@@ -99,7 +99,9 @@ $suser = $_SESSION['user'];
 						
 			<!--Submit button-->
 			<button class="btn btn-primary btn-lg text-button" onclick="getLocation()" type="button">Continue</button>
-		
+		              <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWRMiZPMRN1F4CkMBZK_oEtnEBZ44-8zk&signed_in=true&callback=initMap"></script>
+        
 		</div><!--end of jumbotron-->
 	</div> <!-- end of container -->
 	
