@@ -2,6 +2,9 @@ body {
 	font: .8em "Lucida Sans", "Trebuchet MS", Verdana, Arial, Sans-Serif;
 	background-color : #4f4f97;
 }
+#register{
+	color:white;
+}
 a {
 	text-decoration: none;
 	color: #4f4f97;
