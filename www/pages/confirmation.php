@@ -9,14 +9,11 @@ if(!isset($_SESSION['user']))
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
 
-/*
-From http://www.html-form-guide.com 
-This is the simplest emailer one can have in PHP.
-If this does not work, then the PHP email configuration is bad!
-*/
   	$lat = $_GET['lat'];
 	$lgn = $_GET['lgn'];
-	
+/*
+From http://www.html-form-guide.com 
+*/	
 if(isset($_POST['submit']))
 {	
     $lat = $_GET['lat'];
@@ -29,10 +26,30 @@ if(isset($_POST['submit']))
 
 	$to_add = "firminofranciele@gmail.com"; //<-- put your yahoo/gmail email address here
 
-	$subject = "BoBo App: I got a taxi.";
-	
-	$message = "Hello";
+	$subject = "BoBo App: I got in a taxi.";
+	$message = "
+	<html>
+	<head>
+	<title>MY JOURNEY DETAILS</title>
+	</head>
+	<body>
+	<table>
+	<tr>
+	<td>TAXI REGISTRATION No:</td>
+	<td>" .$_SESSION['taxi_reg']. "</td>
+	</tr>
+	<tr>
+	<td>LOCATION:</td>
+	<td>" .$lat. "</td>
+	<td>" .$lgn. "</td>
+	</tr>
+	</table>
+	<img src=https://maps.googleapis.com/maps/api/staticmap?center=".$lat.",".$lgn."&zoom=17&size=400x400&markers=color:blue|".$lat.",".$lgn."&key=AIzaSyCtwsCFvP86ikM2CbVZNz23cP_1Axb9JbE>
+	</body>
+	</html>
+	";
 
+	
 	$headers = "From: $from_add \r\n";
 	$headers .= "Reply-To: $from_add \r\n";
 	$headers .= "Return-Path: $from_add\r\n";
