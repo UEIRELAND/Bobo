@@ -29,7 +29,7 @@ $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 <body>
 	
 	<!--This is the Backstretch code which uses a jquery-->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="../jquery/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="../jquery/jquery.backstretch.js"></script>
 	<script type="text/javascript">
 		$.backstretch(["../images/cab.jpg"]);
