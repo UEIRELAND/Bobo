@@ -14,25 +14,25 @@ if(!isset($_SESSION['user']))
 
 	$res=mysql_query("SELECT * FROM contacts WHERE user_id= $user_id");
 
+
 	$contacts = array();
-	
+
 	while($userRow=mysql_fetch_array($res)){
 		$contacts[] = $userRow;
 	}
 }
-
 $suser = $_SESSION['user'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Bobo App</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="messaging contacts when arrived">
+    <meta name="description" content="text">
     <meta name="author" content="Niamh Griffin">
     <!--picture on tab beside title-->
 	<link rel="icon" href="../images/BoboLogo2.ico">
@@ -56,7 +56,8 @@ $suser = $_SESSION['user'];
 	<script type="text/javascript">
 		$.backstretch(["../images/cab.jpg"]);
 	</script>
-	
+
+
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
@@ -94,7 +95,7 @@ $suser = $_SESSION['user'];
 			</div>
 						
 			<!--Submit button-->
-			<button type="button" class="btn btn-primary btn-lg text-button"><a href="msgHome.php">Continue</a></button>
+			<button onClick="home()" type="button" class="btn btn-primary btn-lg text-button">I've Arrived</button>
 		
 		</div><!--end of jumbotron-->
 	</div> <!-- /container -->
@@ -115,6 +116,7 @@ $suser = $_SESSION['user'];
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="../javaScript/bootstrap.min.js"></script>
 	<script src="../javaScript/bobo.js"></script>
+
 	
 </body>
 </html>

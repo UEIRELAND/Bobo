@@ -66,6 +66,12 @@ $userRow=mysql_fetch_array($res);
 </head>
 
 <body>
+	<!--This is the Backstretch code which uses a jquery-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="../jquery/jquery.backstretch.js"></script>
+	<script type="text/javascript">
+		$.backstretch(["../images/ny2.jpg"]);
+	</script>
 
 		<!--this is the code for the navbar-->
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -127,19 +133,19 @@ $userRow=mysql_fetch_array($res);
 				</form>
 			</div>
 		</center>
-						
-			<footer class="navbar-default navbar-fixed-bottom">
-			<div class="container-fluid">
-			<center>
-				<span><p>Copyright &copy; <a href="bobo15@gmail.com" title="bobo15@gmail.com">bobo15@gmail.com</a></p></span>
-			</center>
-			</div>
-	</footer>
+		
+		</div>	<!--end of jumbotron-->
 			
-		</div>	
-			
-	</div>	
+	</div>	<!--end of container-->
         
+        <!--this is the code for the footer navbar-->
+	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<center><h4>© 2015 Bobo App</h4></center>
+			</div>
+		</div>
+	</nav>
          
 
 
@@ -155,15 +161,5 @@ $userRow=mysql_fetch_array($res);
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="../javaScript/ie10-viewport-bug-workaround.js"></script>
 	
-	<!--This is the Backstretch code which uses a jquery-->
-			<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-			<script type="text/javascript" src="../jquery/jquery.backstretch.js"></script>
-			<script type="text/javascript">
-				$.backstretch(["../images/ny2.jpg"]);
-			</script>
-	
-	
-	
- 
  </body>
 </html>
