@@ -33,7 +33,7 @@ if(isset($_POST['btn-login']))
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>BoBo - Login & Registration System</title>
-<<<<<<< HEAD
+
 	<!--<link rel="stylesheet" href="css/style.css" type="text/css" />-->
 	
 	<!-- Bootstrap core CSS -->
@@ -41,8 +41,6 @@ if(isset($_POST['btn-login']))
 
     <!-- Custom styles for this page -->
     <link href="../css/homepage.css" rel="stylesheet">
-	
-=======
 	
 	
 	<!-- Latest compiled and minified CSS -->
@@ -56,7 +54,7 @@ if(isset($_POST['btn-login']))
     <link href="../css/bootstrap.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
->>>>>>> 813fed646818d1db1e6dfef6ebfca1ddbfe3cb36
+
 </head>
 
 <body>

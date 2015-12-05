@@ -116,7 +116,7 @@ $mydriver= $_GET['taxi_reg'];
 		
 	</div><!--end of jumbotron-->
 
-=======
+
 			<!--table of leaving alerts-->
 			<div class="table-responsive text-table-margin">          
 				<table class="table table-hover">
@@ -150,7 +150,7 @@ $mydriver= $_GET['taxi_reg'];
 						
 			<!--Submit button-->
 			<button type="button" class="btn btn-primary btn-lg text-button"><a href="msgHome.php">Continue</a></button>
->>>>>>> 813fed646818d1db1e6dfef6ebfca1ddbfe3cb36
+
 		
 		</div><!--end of jumbotron-->
 	</div> <!-- /container -->

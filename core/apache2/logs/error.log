@@ -1320,3 +1320,100 @@
 [Fri Dec 04 14:44:27.867792 2015] [mpm_winnt:notice] [pid 15292:tid 652] AH00354: Child: Starting 150 worker threads.
 [Fri Dec 04 14:44:30.651862 2015] [:error] [pid 15292:tid 1868] [client ::1:57499] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 68
 [Fri Dec 04 14:44:30.651862 2015] [:error] [pid 15292:tid 1868] [client ::1:57499] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 106
+[Fri Dec 04 15:05:02.156758 2015] [core:warn] [pid 12516:tid 384] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 04 15:05:02.187415 2015] [mpm_winnt:notice] [pid 12516:tid 384] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
+[Fri Dec 04 15:05:02.187415 2015] [mpm_winnt:notice] [pid 12516:tid 384] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
+[Fri Dec 04 15:05:02.187415 2015] [core:notice] [pid 12516:tid 384] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
+[Fri Dec 04 15:05:02.196821 2015] [mpm_winnt:notice] [pid 12516:tid 384] AH00418: Parent: Created child process 16660
+[Fri Dec 04 15:05:02.729272 2015] [mpm_winnt:notice] [pid 16660:tid 652] AH00354: Child: Starting 150 worker threads.
+[Fri Dec 04 15:05:05.524917 2015] [:error] [pid 16660:tid 1868] [client ::1:58333] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 68
+[Fri Dec 04 15:05:05.524917 2015] [:error] [pid 16660:tid 1868] [client ::1:58333] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 106
+[Fri Dec 04 15:05:42.812604 2015] [:error] [pid 16660:tid 1856] [client ::1:58382] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 15:05:48.703280 2015] [:error] [pid 16660:tid 1856] [client ::1:58386] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 68
+[Fri Dec 04 15:05:48.703280 2015] [:error] [pid 16660:tid 1856] [client ::1:58386] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 106
+[Fri Dec 04 15:09:33.365012 2015] [:error] [pid 16660:tid 1856] [client ::1:58548] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 15:32:10.436143 2015] [core:warn] [pid 1096:tid 300] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 04 15:32:10.467395 2015] [mpm_winnt:notice] [pid 1096:tid 300] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
+[Fri Dec 04 15:32:10.467395 2015] [mpm_winnt:notice] [pid 1096:tid 300] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
+[Fri Dec 04 15:32:10.467395 2015] [core:notice] [pid 1096:tid 300] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
+[Fri Dec 04 15:32:10.467395 2015] [mpm_winnt:notice] [pid 1096:tid 300] AH00418: Parent: Created child process 8860
+[Fri Dec 04 15:32:10.842412 2015] [mpm_winnt:notice] [pid 8860:tid 652] AH00354: Child: Starting 150 worker threads.
+[Fri Dec 04 15:40:05.482513 2015] [:error] [pid 8860:tid 1876] [client ::1:59568] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/
+[Fri Dec 04 15:40:05.482513 2015] [:error] [pid 8860:tid 1876] [client ::1:59568] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/
+[Fri Dec 04 15:40:17.861535 2015] [:error] [pid 8860:tid 1864] [client ::1:59590] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 15:44:46.617235 2015] [core:warn] [pid 7100:tid 300] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 04 15:44:46.648486 2015] [mpm_winnt:notice] [pid 7100:tid 300] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
+[Fri Dec 04 15:44:46.648486 2015] [mpm_winnt:notice] [pid 7100:tid 300] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
+[Fri Dec 04 15:44:46.648486 2015] [core:notice] [pid 7100:tid 300] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
+[Fri Dec 04 15:44:46.648486 2015] [mpm_winnt:notice] [pid 7100:tid 300] AH00418: Parent: Created child process 3540
+[Fri Dec 04 15:44:47.023503 2015] [mpm_winnt:notice] [pid 3540:tid 652] AH00354: Child: Starting 150 worker threads.
+[Fri Dec 04 15:44:49.906781 2015] [:error] [pid 3540:tid 1868] [client ::1:59708] PHP Warning:  mysql_connect(): No connection could be made because the target machine actively refused it.\r\n in C:\\Bobo\\Bobo\\www\\includes\\connectDB.php on line 4
+[Fri Dec 04 15:45:01.212219 2015] [:error] [pid 3540:tid 1848] [client ::1:59731] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69
+[Fri Dec 04 15:45:01.212219 2015] [:error] [pid 3540:tid 1848] [client ::1:59731] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107
+[Fri Dec 04 15:45:10.624280 2015] [:error] [pid 3540:tid 1852] [client ::1:59732] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 15:45:10.624280 2015] [:error] [pid 3540:tid 1852] [client ::1:59732] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 15:45:15.285064 2015] [:error] [pid 3540:tid 1860] [client ::1:59756] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 15:45:51.092529 2015] [core:warn] [pid 1016:tid 300] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 04 15:45:51.113545 2015] [mpm_winnt:notice] [pid 1016:tid 300] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
+[Fri Dec 04 15:45:51.113545 2015] [mpm_winnt:notice] [pid 1016:tid 300] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
+[Fri Dec 04 15:45:51.113545 2015] [core:notice] [pid 1016:tid 300] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
+[Fri Dec 04 15:45:51.121552 2015] [mpm_winnt:notice] [pid 1016:tid 300] AH00418: Parent: Created child process 13876
+[Fri Dec 04 15:45:51.492071 2015] [mpm_winnt:notice] [pid 13876:tid 656] AH00354: Child: Starting 150 worker threads.
+[Fri Dec 04 15:45:54.363978 2015] [:error] [pid 13876:tid 1868] [client ::1:59778] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69
+[Fri Dec 04 15:45:54.363978 2015] [:error] [pid 13876:tid 1868] [client ::1:59778] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107
+[Fri Dec 04 15:46:06.556569 2015] [:error] [pid 13876:tid 1852] [client ::1:59815] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost:81/pages/verify.php
+[Fri Dec 04 16:11:48.592208 2015] [:error] [pid 13876:tid 1852] [client ::1:60771] PHP Warning:  mysql_connect(): No connection could be made because the target machine actively refused it.\r\n in C:\\Bobo\\Bobo\\www\\includes\\connectDB.php on line 4
+[Fri Dec 04 16:12:13.110209 2015] [core:warn] [pid 4080:tid 380] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 04 16:12:13.138227 2015] [mpm_winnt:notice] [pid 4080:tid 380] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
+[Fri Dec 04 16:12:13.138227 2015] [mpm_winnt:notice] [pid 4080:tid 380] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
+[Fri Dec 04 16:12:13.138227 2015] [core:notice] [pid 4080:tid 380] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
+[Fri Dec 04 16:12:13.146233 2015] [mpm_winnt:notice] [pid 4080:tid 380] AH00418: Parent: Created child process 9260
+[Fri Dec 04 16:12:13.527487 2015] [mpm_winnt:notice] [pid 9260:tid 660] AH00354: Child: Starting 150 worker threads.
+[Fri Dec 04 16:12:16.337353 2015] [:error] [pid 9260:tid 1868] [client ::1:60809] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69
+[Fri Dec 04 16:12:16.337353 2015] [:error] [pid 9260:tid 1868] [client ::1:60809] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107
+[Fri Dec 04 16:12:18.613867 2015] [:error] [pid 9260:tid 1856] [client ::1:60814] PHP Warning:  mysql_connect(): No connection could be made because the target machine actively refused it.\r\n in C:\\Bobo\\Bobo\\www\\includes\\fetchDB.php on line 4, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:12:49.571293 2015] [:error] [pid 9260:tid 1848] [client ::1:60845] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 16:12:49.571293 2015] [:error] [pid 9260:tid 1848] [client ::1:60845] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 16:12:51.781550 2015] [:error] [pid 9260:tid 1852] [client ::1:60855] PHP Warning:  mysql_connect(): No connection could be made because the target machine actively refused it.\r\n in C:\\Bobo\\Bobo\\www\\includes\\fetchDB.php on line 4, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:13:58.710190 2015] [core:warn] [pid 14140:tid 300] AH00098: pid file C:/Bobo/Bobo/core/apache2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Dec 04 16:13:58.731207 2015] [mpm_winnt:notice] [pid 14140:tid 300] AH00455: Apache/2.4.16 (Win32) PHP/5.4.45 configured -- resuming normal operations
+[Fri Dec 04 16:13:58.731207 2015] [mpm_winnt:notice] [pid 14140:tid 300] AH00456: Apache Lounge VC10 Server built: Jul 12 2015 13:26:53
+[Fri Dec 04 16:13:58.731207 2015] [core:notice] [pid 14140:tid 300] AH00094: Command line: 'C:\\Bobo\\Bobo\\core\\apache2\\bin\\httpd_z.exe -d C:/Bobo/Bobo/core/apache2 -f C:\\Bobo\\Bobo\\core\\apache2\\conf\\httpd.conf -d C:\\Bobo\\Bobo\\core\\apache2'
+[Fri Dec 04 16:13:58.738213 2015] [mpm_winnt:notice] [pid 14140:tid 300] AH00418: Parent: Created child process 7820
+[Fri Dec 04 16:13:59.123474 2015] [mpm_winnt:notice] [pid 7820:tid 656] AH00354: Child: Starting 150 worker threads.
+[Fri Dec 04 16:14:01.976256 2015] [:error] [pid 7820:tid 1868] [client ::1:60907] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69
+[Fri Dec 04 16:14:01.976256 2015] [:error] [pid 7820:tid 1868] [client ::1:60907] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107
+[Fri Dec 04 16:14:04.273354 2015] [:error] [pid 7820:tid 1856] [client ::1:60910] PHP Warning:  mysql_connect(): No connection could be made because the target machine actively refused it.\r\n in C:\\Bobo\\Bobo\\www\\includes\\fetchDB.php on line 4, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:14:34.248563 2015] [:error] [pid 7820:tid 1848] [client ::1:60948] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 16:14:34.248563 2015] [:error] [pid 7820:tid 1848] [client ::1:60948] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 16:14:36.451400 2015] [:error] [pid 7820:tid 1864] [client ::1:60956] PHP Warning:  mysql_connect(): No connection could be made because the target machine actively refused it.\r\n in C:\\Bobo\\Bobo\\www\\includes\\fetchDB.php on line 4, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:15:08.955343 2015] [:error] [pid 7820:tid 1864] [client ::1:60978] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 16:15:08.955343 2015] [:error] [pid 7820:tid 1864] [client ::1:60978] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 16:19:11.015771 2015] [:error] [pid 7820:tid 1868] [client ::1:61125] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:19:43.389469 2015] [:error] [pid 7820:tid 1868] [client ::1:61142] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 16:19:43.389469 2015] [:error] [pid 7820:tid 1868] [client ::1:61142] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 16:20:00.759205 2015] [:error] [pid 7820:tid 1852] [client ::1:61159] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:21:33.716538 2015] [:error] [pid 7820:tid 1852] [client ::1:61208] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 16:21:33.716538 2015] [:error] [pid 7820:tid 1852] [client ::1:61208] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 16:21:38.804786 2015] [:error] [pid 7820:tid 1848] [client ::1:61209] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:21:48.637433 2015] [:error] [pid 7820:tid 1856] [client ::1:61224] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 16:21:48.637433 2015] [:error] [pid 7820:tid 1856] [client ::1:61224] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 16:22:08.979126 2015] [:error] [pid 7820:tid 1868] [client ::1:61237] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/index.php
+[Fri Dec 04 16:22:08.979126 2015] [:error] [pid 7820:tid 1868] [client ::1:61237] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/index.php
+[Fri Dec 04 16:25:04.427766 2015] [:error] [pid 7820:tid 1856] [client ::1:61348] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:25:04.427766 2015] [:error] [pid 7820:tid 1856] [client ::1:61348] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:42:24.408020 2015] [:error] [pid 7820:tid 1868] [client ::1:61849] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/pages/settings.php
+[Fri Dec 04 16:42:24.408020 2015] [:error] [pid 7820:tid 1868] [client ::1:61849] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/pages/settings.php
+[Fri Dec 04 16:42:36.835876 2015] [:error] [pid 7820:tid 1856] [client ::1:61863] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:42:51.362213 2015] [:error] [pid 7820:tid 1856] [client ::1:61870] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69
+[Fri Dec 04 16:42:51.362213 2015] [:error] [pid 7820:tid 1856] [client ::1:61870] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107
+[Fri Dec 04 16:42:58.123770 2015] [:error] [pid 7820:tid 1856] [client ::1:61870] PHP Notice:  Undefined variable: conn in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
+[Fri Dec 04 16:42:58.123770 2015] [:error] [pid 7820:tid 1856] [client ::1:61870] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in C:\\Bobo\\Bobo\\www\\pages\\account.php on line 11, referer: http://localhost/pages/settings.php
+[Fri Dec 04 16:43:00.806890 2015] [:error] [pid 7820:tid 1856] [client ::1:61870] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/pages/account.php
+[Fri Dec 04 16:43:00.807897 2015] [:error] [pid 7820:tid 1856] [client ::1:61870] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/pages/account.php
+[Fri Dec 04 16:47:07.511206 2015] [:error] [pid 7820:tid 1860] [client ::1:62021] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
+[Fri Dec 04 16:47:13.141247 2015] [:error] [pid 7820:tid 1860] [client ::1:62024] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69, referer: http://localhost/pages/account.php
+[Fri Dec 04 16:47:13.141247 2015] [:error] [pid 7820:tid 1860] [client ::1:62024] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107, referer: http://localhost/pages/account.php
+[Fri Dec 04 17:12:59.436475 2015] [:error] [pid 7820:tid 1852] [client ::1:62885] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 69
+[Fri Dec 04 17:12:59.436475 2015] [:error] [pid 7820:tid 1852] [client ::1:62885] PHP Notice:  Undefined variable: userRow in C:\\Bobo\\Bobo\\www\\pages\\verify.php on line 107
+[Fri Dec 04 17:13:07.265756 2015] [:error] [pid 7820:tid 1864] [client ::1:62889] PHP Parse error:  syntax error, unexpected '?>\r' in C:\\Bobo\\Bobo\\www\\pages\\msgLeaving.php on line 19, referer: http://localhost/pages/verify.php
