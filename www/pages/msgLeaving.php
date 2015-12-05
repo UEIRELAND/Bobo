@@ -14,8 +14,14 @@ if(!isset($_SESSION['user']))
 
 	$res=mysql_query("SELECT * FROM contacts WHERE user_id= $user_id");
 
-
 	$contacts = array();
+
+	//adds taxi details to account history table
+	$mydriver= $_GET['taxi_reg'];
+	$myid= $_GET['user_id'];
+	$myid3 = (int)$myid;
+	$myid2 = mysql_real_escape_string($myid);
+	mysql_query("INSERT INTO user_history(taxi_reg, user_id) VALUES('$mydriver','$myid3')") or die('you have a problem connection '.mysql_error());
 
 	while($userRow=mysql_fetch_array($res)){
 		$contacts[] = $userRow;
@@ -23,7 +29,6 @@ if(!isset($_SESSION['user']))
 }
 $suser = $_SESSION['user'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +52,7 @@ $suser = $_SESSION['user'];
 	<script src="../javaScript/ie-emulation-modes-warning.js"></script>
 	<!--link to javaScript file-->
 	<script src="../javaScript/text.js"></script>
+	<script src="../javaScript/Geolocation.js"></script>
 	
 </head>
 
@@ -92,7 +98,7 @@ $suser = $_SESSION['user'];
 			</div>
 						
 			<!--Submit button-->
-			<button type="button" class="btn btn-primary btn-lg text-button"><a href="msgHome.php">Continue</a></button>
+			<button class="btn btn-primary btn-lg text-button" onclick="getLocation()" type="button">Continue</button>
 		
 		</div><!--end of jumbotron-->
 	</div> <!-- end of container -->
