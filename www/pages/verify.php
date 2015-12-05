@@ -19,11 +19,29 @@ $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="verify">
     <meta name="author" content="Youcef">
-	<!--picture on tab beside title-->
-	<link rel="icon" href="../images/BoboLogo2.ico">
+
 	<!-- Bootstrap core CSS -->
 	<link href="../css/bootstrap.css" rel="stylesheet">
 	
+
+    <link rel="icon" href="../images/BoboLogo.png"><!--picture on tab beside title-->
+
+    <title>Bobo App</title>
+
+
+    <!-- error handling -->
+	<script src="assets/js/ie-emulation-modes-warning.js"></script>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- AngularJS Link---->
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+	<!--Own CSS-->
+	<script src="../css/search.css"></script>
+
 </head>
 
 <body>

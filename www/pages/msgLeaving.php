@@ -9,10 +9,13 @@ if(!isset($_SESSION['user']))
 	if(!isset($_GET['user_id'])){
 		header("Location: verify.php");
 	}
+$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+$userRow=mysql_fetch_array($res);
 
 	$user_id = $_GET['user_id'];
 
-	$res=mysql_query("SELECT * FROM contacts WHERE user_id= $user_id");
+	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+	$userRow=mysql_fetch_array($res);
 
 	$contacts = array();
 
@@ -68,12 +71,7 @@ $suser = $_SESSION['user'];
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/master
 			<!--table of leaving alerts-->
 			<div class="table-responsive text-table-margin">          
 				<table class="table table-hover">
@@ -131,6 +129,10 @@ $suser = $_SESSION['user'];
 	================================================= -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../dist/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
 	<script src="../javaScript/bootstrap.min.js"></script>
 	<script src="../javaScript/bobo.js"></script>
 
