@@ -1,0 +1,25 @@
+<!--
+	session_start();
+	if(isset($_SESSION['users'])!="")
+{
+	header("Location: verify.php");
+}
+	include_once '../includes/connectDB.php';
+		
+	$sql = 'SELECT user_id, fname, lname, username, email, DOB, phone FROM users';
+	mysql_select_db ('../dbtest');
+	$retval = mysql_query($sql, $conn);
+	
+$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+	$row=mysql_fetch_array($res);	
+	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+	$userRow=mysql_fetch_array($res);
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
