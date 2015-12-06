@@ -9,9 +9,6 @@ if(!isset($_SESSION['user']))
 	if(!isset($_GET['user_id'])){
 		header("Location: verify.php");
 	}
-$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-$userRow=mysql_fetch_array($res);
-
 	$user_id = $_GET['user_id'];
 
 	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
@@ -21,6 +18,7 @@ $userRow=mysql_fetch_array($res);
 
 	//adds taxi details to account history table
 	$mydriver= $_GET['taxi_reg'];
+	$_SESSION['driver'] = $mydriver;
 	$myid= $_GET['user_id'];
 	$myid3 = (int)$myid;
 	$myid2 = mysql_real_escape_string($myid);
@@ -108,8 +106,8 @@ $suser = $_SESSION['user'];
 		
 
 			<button class="btn btn-primary btn-lg text-button" onclick="getLocation()" type="button">Continue</button>
-		              <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWRMiZPMRN1F4CkMBZK_oEtnEBZ44-8zk&signed_in=true&callback=initMap"></script>
+		    <script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGwJJ6jnnh4FJ07Zf79PQiBe7NXE4yKn8&signed_in=true&callback=initMap"></script>
 
 		</div><!--end of jumbotron-->
 	</div> <!-- end of container -->
