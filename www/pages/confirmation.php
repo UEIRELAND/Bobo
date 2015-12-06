@@ -1,22 +1,17 @@
 <?php
 session_start();
 include_once '../includes/connectDB.php';
-
 if(!isset($_SESSION['user']))
 {
 	header("Location: verify.php");
 }
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
-
-/*
-From http://www.html-form-guide.com 
-This is the simplest emailer one can have in PHP.
-If this does not work, then the PHP email configuration is bad!
-*/
   	$lat = $_GET['lat'];
 	$lgn = $_GET['lgn'];
-	
+/*
+From http://www.html-form-guide.com 
+*/	
 if(isset($_POST['submit']))
 {	
     $lat = $_GET['lat'];
@@ -26,17 +21,36 @@ if(isset($_POST['submit']))
 	$lname = $userRow['lname'];
 	
 	$from_add = "info@bobo.netau.net"; 
-
 	$to_add = "firminofranciele@gmail.com"; //<-- put your yahoo/gmail email address here
-
-	$subject = "BoBo App: I got a taxi.";
+	$subject = "BoBo App:".$fname." ".$lname." got in a taxi.";
+	$message = "
+	<html>
+	<head>
+	<title>JOURNEY DETAILS</title>
+	</head>
+	<body>
+	<table>
+	<tr>
+	<td>TAXI REGISTRATION No:</td>
+	<td>" .$_SESSION['taxi_reg']. "</td>
+	</tr>
+	<tr>
+	<td>LOCATION:</td>
+	<td>" .$lat. "</td>
+	<td>" .$lgn. "</td>
+	</tr>
+	</table>
+	<img src=https://maps.googleapis.com/maps/api/staticmap?center=".$lat.",".$lgn."&zoom=17&size=400x400&markers=color:blue|".$lat.",".$lgn."&key=AIzaSyCtwsCFvP86ikM2CbVZNz23cP_1Axb9JbE>
+	</body>
+	</html>
+	";
 	
-	$message = "Hello";
-
 	$headers = "From: $from_add \r\n";
 	$headers .= "Reply-To: $from_add \r\n";
 	$headers .= "Return-Path: $from_add\r\n";
 	$headers .= "X-Mailer: PHP \r\n";
+	$headers .= "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 	
 	
 	if(mail($to_add,$subject,$message,$headers)) 
@@ -92,7 +106,7 @@ if(isset($_POST['submit']))
 				<table class="table table-hover">
 				<tr><td>MY JOURNEY DETAILS</td></tr>
 				<tr><td>LOCATION: <?php echo $lat.",".$lgn; ?></td></tr>
-                <tr><td>DRIVER: <?php echo $_SESSION['taxi_reg']; ?></td></tr>
+                <tr><td>TAXI REGISTRATION No:<?php echo  $_SESSION['driver']; ?></td></tr>
 	  	        </table>
 		
 		<center><img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $lat.",".$lgn; ?>&zoom=17&size=400x400&markers=color:blue|<?php echo $lat.",".$lgn; ?>&key=AIzaSyCtwsCFvP86ikM2CbVZNz23cP_1Axb9JbE"></center>
