@@ -1,17 +1,3 @@
-var x = document.getElementById("demo");
-
-		function getLocation() {
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(showPosition);
-			} else { 
-				x.innerHTML = "Geolocation is not supported by this browser.";
-			}
-		}
-
-		function redirectToPosition(position) {
-			window.location='msgLeaving.php.php?lat='+position.coords.latitude+'&long='+position.coords.longitude;
-		}
-		
 function initializeGeoLocation(){
 	navigator.geolocation.getCurrentPosition(getPosition);
 }
@@ -19,11 +5,13 @@ function initializeGeoLocation(){
 						
 function getPosition(position) {
 	// initialize the map
-	var map = new Microsoft.Maps.Map(document.getElementById("map"), {credentials: "AIzaSyAWRMiZPMRN1F4CkMBZK_oEtnEBZ44-8z"});
+	var map = new Microsoft.Maps.Map(document.getElementById("map"), {credentials: "AIzaSyCGwJJ6jnnh4FJ07Zf79PQiBe7NXE4yKn8"});
 	
 	var lat = new Microsoft.Maps.Location(position.coords.latitude);
 	var lat = new Microsoft.Maps.Location(position.coords.longitude);
 }
+
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
