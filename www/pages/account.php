@@ -8,8 +8,13 @@
 	}
 	
 	$sql = 'SELECT user_id, fname, lname, username, email, DOB, phone FROM users';
+	$sql2 = 'SELECT taxi_reg FROM user_history';
 	mysql_select_db ('../dbtest');
 	$retval = mysql_query($sql, $conn);
+	$retval = mysql_query($sql2, $conn);
+	//Display User History
+	$res=mysql_query("SELECT * FROM user_history WHERE taxi_reg=".$_SESSION['user']);
+	$userRow2=mysql_fetch_array($res);
 	//shows user info on the table
 	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 	$row=mysql_fetch_array($res);	
@@ -104,7 +109,27 @@
 		
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">View Taxi history</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Taxi History</h4>
+      </div>
+      <div class="modal-body">
+        							<td>Email: </td>
+							<td><?php echo $row['taxi_reg']?></td>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>	
+			
 				</form>
+				
 			</div>
 		
 		</div><!--end of jumbotron-->
