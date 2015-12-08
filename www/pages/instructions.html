@@ -47,21 +47,20 @@
 						
                 </div>
                 <div class="collapse navbar-collapse collapse" id="navbar">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a href="verify.php"data-toggle="collapse" data-target=".navbar-collapse">Home</a></li>
-                        <li class="active"><a href="account.php" data-toggle="collapse" data-target=".navbar-collapse">Account</a></li>
-                        <li><a href="settings.php" data-toggle="collapse" data-target=".navbar-collapse">Settings</a></li>
-                    </ul>
+                    	<ul class="nav navbar-nav navbar-left">
+	                        <li><a href="verify.php"data-toggle="collapse" data-target=".navbar-collapse">Home</a></li>
+	                        <li class="active"><a href="account.php" data-toggle="collapse" data-target=".navbar-collapse">Account</a></li>
+	                        <li><a href="settings.php" data-toggle="collapse" data-target=".navbar-collapse">Settings</a></li>
+                	 </ul>
 					
-					<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										
-										<li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
-									</ul>
-							</li>
-					</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				<li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
+				</ul>
+				</li>
+			</ul>
                 </div>
             </div>
 			
