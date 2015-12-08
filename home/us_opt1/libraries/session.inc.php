@@ -123,7 +123,7 @@ function PMA_secureSession()
     if ((PMA_PHP_INT_VERSION >= 50400 && session_status() === PHP_SESSION_ACTIVE)
         || (PMA_PHP_INT_VERSION < 50400 && session_id() !== '')
     ) {
-        session_regenerate_id(true);
+        session_regenerate_id(false);
     }
     $_SESSION[' PMA_token '] = md5(uniqid(rand(), true));
 }
