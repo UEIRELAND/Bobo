@@ -1493,3 +1493,47 @@ Version: '5.5.45'  socket: ''  port: 3306  MySQL Community Server (GPL)
 151205 22:57:06  InnoDB: Shutdown completed; log sequence number 3380035
 151205 22:57:06 [Note] C:\Bobo\Bobo\core\mysql\bin\mysqld_z.exe: Shutdown complete
 
+151208 13:55:15 [Note] Plugin 'FEDERATED' is disabled.
+151208 13:55:15 InnoDB: The InnoDB memory heap is disabled
+151208 13:55:15 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151208 13:55:15 InnoDB: Compressed tables use zlib 1.2.3
+151208 13:55:15 InnoDB: Initializing buffer pool, size = 16.0M
+151208 13:55:15 InnoDB: Completed initialization of buffer pool
+151208 13:55:15 InnoDB: highest supported file format is Barracuda.
+151208 13:55:19  InnoDB: Waiting for the background threads to start
+151208 13:55:20 InnoDB: 5.5.45 started; log sequence number 3380035
+151208 13:55:20 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151208 13:55:20 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151208 13:55:20 [Note] Server socket created on IP: '127.0.0.1'.
+151208 13:55:21 [Note] Event Scheduler: Loaded 0 events
+151208 13:55:21 [Note] C:\Bobo\core\mysql\bin\mysqld_z.exe: ready for connections.
+Version: '5.5.45'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151208 14:03:08 [Note] C:\Bobo\core\mysql\bin\mysqld_z.exe: Normal shutdown
+
+151208 14:03:08 [Note] Event Scheduler: Purging the queue. 0 events
+151208 14:03:08  InnoDB: Starting shutdown...
+151208 14:03:09  InnoDB: Shutdown completed; log sequence number 3380173
+151208 14:03:09 [Note] C:\Bobo\core\mysql\bin\mysqld_z.exe: Shutdown complete
+
+151208 14:03:35 [Note] Plugin 'FEDERATED' is disabled.
+151208 14:03:35 InnoDB: The InnoDB memory heap is disabled
+151208 14:03:35 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+151208 14:03:35 InnoDB: Compressed tables use zlib 1.2.3
+151208 14:03:35 InnoDB: Initializing buffer pool, size = 16.0M
+151208 14:03:35 InnoDB: Completed initialization of buffer pool
+151208 14:03:35 InnoDB: highest supported file format is Barracuda.
+151208 14:03:36  InnoDB: Waiting for the background threads to start
+151208 14:03:37 InnoDB: 5.5.45 started; log sequence number 3380173
+151208 14:03:37 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+151208 14:03:37 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+151208 14:03:37 [Note] Server socket created on IP: '127.0.0.1'.
+151208 14:03:37 [Note] Event Scheduler: Loaded 0 events
+151208 14:03:37 [Note] C:\Bobo\core\mysql\bin\mysqld_z.exe: ready for connections.
+Version: '5.5.45'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151208 15:30:25 [Note] C:\Bobo\core\mysql\bin\mysqld_z.exe: Normal shutdown
+
+151208 15:30:25 [Note] Event Scheduler: Purging the queue. 0 events
+151208 15:30:25  InnoDB: Starting shutdown...
+151208 15:30:26  InnoDB: Shutdown completed; log sequence number 3389665
+151208 15:30:26 [Note] C:\Bobo\core\mysql\bin\mysqld_z.exe: Shutdown complete
+
