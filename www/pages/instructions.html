@@ -93,15 +93,7 @@ a:hover {color:#ccc; text-decoration:none}
 <div style="top: 199.5px; left: 551.5px; display: none;" id="dialog" class="window">
 Simple Modal Window | 
 <a href="#" class="close">Close it</a>
-</div>
-<!-- Mask to cover the whole screen -->
-<div style="width: 1478px; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
-</div>
-
-<div class="container">
-		<div class="jumbotron">
-			<div id="account">
-				<form method="post">
+<form method="post">
 				 <table class="table" ng-hide="!searchText.length" style="background-color:white; opacity:0.8; font-weight:bold; font-size:18px">
 				 <tr>
 				 <th colspan = "2"><h2> Instructions</h2></th>
@@ -132,13 +124,17 @@ Simple Modal Window |
 					</tr>
 					
 				</table></br>
-		
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary btn-lg" a href="settings.php">
-				Continue
-			</button>
+
+				</form> 
+</div>
+<!-- Mask to cover the whole screen -->
+<div style="width: 1478px; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+</div>
+
+<div class="container">
+		<div class="jumbotron">
+			<div id="account">
 				
-				</form>
 			</div>
 						
 			<footer class="navbar-default navbar-fixed-bottom">
