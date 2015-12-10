@@ -80,8 +80,8 @@
 
 			<!--table of leaving alerts-->
 			
-		<div class="table-responsive text-table-margin">  
-			<form method="post">			
+			<div class="table-responsive text-table-margin">  
+		<form action="confirmation.php" method="post">			
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -97,7 +97,7 @@
 							<td>
 								
 									<?php
-									echo  "<input type='checkbox' name='contact_name' value='".$contact['contact_name']."'>"
+									echo  "<input type='checkbox' name='".$contact['contact_name']."' value='".$contact['contact_name']."'>"
         .$contact['contact_name'];?>
 							</td>
 						</tr>
@@ -106,11 +106,11 @@
 						}
 						?>
 				</table>
-			</div>
-			<input type="submit" value="continue"  class="btn btn-primary btn-lg text-button" onclick="getLocation()"/>
+			
+			<input type="submit" value="continue"  class="btn btn-primary btn-lg text-button" />
 	
 			</form>
-						
+			</div>			
 			<!--Submit button-->
 
 		

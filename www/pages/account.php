@@ -12,15 +12,22 @@
 	mysql_select_db ('../dbtest');
 	$retval = mysql_query($sql, $conn);
 	$retval = mysql_query($sql2, $conn);
-	//Display User History
-	$res=mysql_query("SELECT * FROM user_history WHERE taxi_reg=".$_SESSION['user']);
-	$userRow2=mysql_fetch_array($res);
+	
 	//shows user info on the table
 	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 	$row=mysql_fetch_array($res);	
-	// shows the username on the right of the navbar
-	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-	$userRow=mysql_fetch_array($res);
+	
+	//get user history
+		$ret=mysql_query("SELECT * FROM user_history WHERE user_id=".$_SESSION['user']);
+
+		$history = array();
+
+		while($historyrow=mysql_fetch_array($ret)){
+			$history[] = $historyrow;
+		}
+	
+	
+	
 ?>
 
 
