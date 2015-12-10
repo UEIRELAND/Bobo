@@ -42,11 +42,132 @@ $userRow=mysql_fetch_array($res);
 
 	<!--Own CSS-->
 	<script src="../css/search.css"></script>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function() {	
+
+		var id = '#dialog';
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		$('#mask').fadeIn(1000);	
+		$('#mask').fadeTo("slow",0.8);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		//transition effect
+		$(id).fadeIn(2000); 	
+	
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});		
+	
+});
+
+</script>
+
+<style type="text/css">
+body {
+font-family:verdana;
+font-size:15px;
+}
+
+a {color:#333; text-decoration:none}
+a:hover {color:#ccc; text-decoration:none}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:550px;
+  height:800px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+#boxes #dialog {
+  width:700px; 
+  height:800px;
+  padding:10px;
+  background-color:#ffffff;
+}
+</style>
 
 </head>
 
 <body>
-	
+	<div id="boxes">
+<div style="top: 199.5px; left: 551.5px; display: none;" id="dialog" class="window">
+<form>
+				 <table class="table" ng-hide="!searchText.length" style="background-color:white; opacity:0.8; font-weight:bold; font-size:18px">
+				 <tr>
+				 <th><h2> Instructions</h2></th>
+				 </tr>
+					<tr>
+						<td><font color = "red">Step 1:</font><br>Go to the <font color = "blue">Settings Page</font> and add the contact details of the people you want to send an email to when you get into the taxi.
+					</tr>
+					<tr>
+					   <td><font color = "red">Step 2:</font><br>After saving your contacts, press <font color = "blue">Continue</font> and you will be brought to the <font color = "blue">Verify Page</font>.</td>
+					</tr>
+					</br>
+					<tr>
+					   <td><font color = "red">Step 3:</font><br>On the homepage you will be required to enter the taxi drivers registration number and accept him or decline him.</td>
+					</tr>
+					</br>
+					<tr>
+						<td><font color = "red">Step 4:</font><br>After accepting the taxi you will be brought to a page of contacts that you added in <font color = "blue">Step 1</font> </td>
+					</tr>
+					</br>
+					<tr><td><font color = "red">Step 5:</font><br>Select the contact you want to alert that you are leaving your current destination and on the way to your next destination. </td>
+					</tr>
+					</br>
+					<tr>
+						<td><font color = "red">Step 6:</font><br>Select the contact you want to alert as you are arriving, or have arrived at your destination. </td>
+					</tr>
+					
+
+				</table></br>
+				</form>
+<a href="#" class="close">Close it</a>
+
+</div>
+<!-- Mask to cover the whole screen -->
+<div style="width: 1478px; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+</div>
 	<!--This is the Backstretch code which uses a jquery-->
 	<script type="text/javascript" src="../jquery/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="../jquery/jquery.backstretch.js"></script>
