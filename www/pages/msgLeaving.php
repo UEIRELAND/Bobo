@@ -10,17 +10,13 @@
 		if(!isset($_GET['user_id'])){
 			header("Location: verify.php");
 		}
-	/*gets user_id of the user currently logged in to be sent to history table
-	$user_id = $_GET['user_id'];
-
-	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-	$userRow=mysql_fetch_array($res);*/
-
-	//sends taxi_reg variable to next page
-	$_SESSION['driver'] = $mydriver;
 	
 	//adds taxi details and user_id to account history table
 	$mydriver= $_GET['taxi_reg'];
+	
+	//sends taxi_reg variable to next page
+	$_SESSION['driver'] = $mydriver;
+	
 	$myid= $_GET['user_id'];
 	$myid3 = (int)$myid;
 	$myid2 = mysql_real_escape_string($myid);
@@ -81,7 +77,7 @@
 			<!--table of leaving alerts-->
 			
 			<div class="table-responsive text-table-margin">  
-		<form action="confirmation.php" method="post">			
+		<form action="confirmation.php" method='post'>			
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -97,7 +93,7 @@
 							<td>
 								
 									<?php
-									echo  "<input type='checkbox' name='".$contact['contact_name']."' value='".$contact['contact_name']."'>"
+									echo  "<input type='checkbox' name='contact_name' value='".$contact['contact_name']."'>"
         .$contact['contact_name'];?>
 							</td>
 						</tr>
@@ -107,7 +103,7 @@
 						?>
 				</table>
 			
-			<input type="submit" value="continue"  class="btn btn-primary btn-lg text-button" />
+			<input type='submit' value='continue' class="btn btn-primary btn-lg text-button" onclick="getLocation()"/>
 	
 			</form>
 			</div>			
