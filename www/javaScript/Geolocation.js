@@ -12,7 +12,8 @@ function getPosition(position) {
 }
 
 
-function getLocation() {
+function getLocation(y) {
+	
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else { 
@@ -22,7 +23,7 @@ function getLocation() {
 
 function showPosition(position) {
 	
-   window.location.href= "confirmation.php?lat=" + position.coords.latitude +"&lgn=" + position.coords.longitude;	
+   window.location.href= "confirmation.php?lat=" + position.coords.latitude +"&lgn=" + position.coords.longitude+"&count1="+100;	
 }
 
 

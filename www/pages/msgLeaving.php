@@ -69,7 +69,14 @@
 	<script type="text/javascript">
 		$.backstretch(["../images/cab.jpg"]);
 	</script>
+<script type="text/javascript">
 
+
+function runMe(){
+	var x = document.getElementById("count1").value;
+	alert("hello "+x);
+}
+</script>
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
@@ -77,7 +84,7 @@
 			<!--table of leaving alerts-->
 			
 			<div class="table-responsive text-table-margin">  
-		<form action="confirmation.php" method='post'>			
+		<form  method='get' action="confirmation.php">			
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -85,16 +92,24 @@
 						</tr>
 					</thead>
 						<?php 
-						
+						$count = 0;
 						foreach($contacts as $contact){
+							$count++;
 						?>
 					<tbody>
 						<tr>
 							<td>
 								
 									<?php
-									echo  "<input type='checkbox' name='contact_name' value='".$contact['contact_name']."'>"
-        .$contact['contact_name'];?>
+									echo  "<input type='checkbox' id='count".$count."' name='contact_email' value='".$contact['contact_email']."'>"
+        .$contact['contact_name'];
+		
+		$_SESSION['count'.$count] = $contact['contact_email'];
+	    $_SESSION['mycount'] =$count;
+	
+		
+		?>
+		                     
 							</td>
 						</tr>
 					</tbody>
@@ -103,11 +118,12 @@
 						?>
 				</table>
 			
-			<input type='submit' value='continue' class="btn btn-primary btn-lg text-button" onclick="getLocation()"/>
+			<input type='submit' value='continue' class="btn btn-primary btn-lg text-button" onclick="getLocation()" />
 	
 			</form>
 			</div>			
 			<!--Submit button-->
+		
 
 		
 

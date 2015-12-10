@@ -29,7 +29,7 @@
 		$history = array();
 
 		while($historyrow=mysql_fetch_array($ret)){
-			$history[] = $historyrow;
+			$history[] = $history;
 		}
 	
 	
@@ -124,7 +124,7 @@
 					</br>
 		
 					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">View Taxi history</button>
+					<a class="btn btn-primary" href="#popup2">Search History</a>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -159,6 +159,40 @@
 			</div>
 		</div>
 	</nav>
+	<div id="popup2" class="overlay">
+        <div class="popup">
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <form id="instructions-form">
+			      <table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Search History</th>
+									</tr>
+								</thead>
+									<?php 
+									
+									foreach($history as $history){
+									?>
+								<tbody>
+									<tr>
+										<td>
+											
+										<?php
+			                                  echo $history['taxi_reg'];
+									     ?>
+										</td>
+									</tr>
+				</tbody>
+									<?php
+									}
+									?>
+				 </table>
+                    </br>
+                </form>
+            </div>
+        </div>
+    </div>
 	
 	
 	<div id="popup1" class="overlay">

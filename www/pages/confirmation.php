@@ -106,7 +106,17 @@ if(isset($_POST['submit']))
 				<table class="table table-hover">
 				<tr><td>MY JOURNEY DETAILS</td></tr>
 				<tr><td>LOCATION: <?php echo $lat.",".$lgn; ?></td></tr>
-                <tr><td>TAXI REGISTRATION No:<?php echo  $_SESSION['driver']; ?></td></tr>
+                <tr><td>TAXI REGISTRATION No:
+								
+				<?php echo $amountContacts = $_SESSION['mycount'];
+				
+				for($i=0; $i<= $amountContacts; $i++){
+					
+					echo $_SESSION['count'.$i]."<br>";
+				}	
+				?>
+				
+				</td></tr>
 	  	        </table>
 		
 		<center><img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $lat.",".$lgn; ?>&zoom=17&size=400x400&markers=color:blue|<?php echo $lat.",".$lgn; ?>&key=AIzaSyCtwsCFvP86ikM2CbVZNz23cP_1Axb9JbE"></center>
