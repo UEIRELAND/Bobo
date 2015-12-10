@@ -1,34 +1,49 @@
 <?php
-session_start();
-include_once '../includes/connectDB.php';
+	//keeps user logged in
+	session_start();
+	include_once '../includes/connectDB.php';
 
-if(!isset($_SESSION['user']))
-{
-	header("Location: verify.php");
-}else{
-	if(!isset($_GET['user_id'])){
+	if(!isset($_SESSION['user']))
+	{
 		header("Location: verify.php");
-	}
+	}else{
+		if(!isset($_GET['user_id'])){
+			header("Location: verify.php");
+		}
+	/*gets user_id of the user currently logged in to be sent to history table
 	$user_id = $_GET['user_id'];
 
 	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-	$userRow=mysql_fetch_array($res);
+	$userRow=mysql_fetch_array($res);*/
 
-	$contacts = array();
-
-	//adds taxi details to account history table
-	$mydriver= $_GET['taxi_reg'];
+	//sends taxi_reg variable to next page
 	$_SESSION['driver'] = $mydriver;
+	
+	//adds taxi details and user_id to account history table
+	$mydriver= $_GET['taxi_reg'];
 	$myid= $_GET['user_id'];
 	$myid3 = (int)$myid;
 	$myid2 = mysql_real_escape_string($myid);
 	mysql_query("INSERT INTO user_history(taxi_reg, user_id) VALUES('$mydriver','$myid3')") or die('you have a problem connection '.mysql_error());
 
-	while($userRow=mysql_fetch_array($res)){
-		$contacts[] = $userRow;
+	$user_id = $_GET['user_id'];
+
+		$res=mysql_query("SELECT * FROM contacts WHERE user_id= $user_id");
+
+		$contacts = array();
+
+		while($userRow=mysql_fetch_array($res)){
+			$contacts[] = $userRow;
+		}
 	}
-}
-$suser = $_SESSION['user'];
+	$suser = $_SESSION['user'];
+		
+	
+	
+	
+	
+
+
 ?>
 
 <!DOCTYPE html>
