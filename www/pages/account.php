@@ -1,21 +1,27 @@
 <?php
 	session_start();
-	include_once '../includes/connectDB.php';
-	
-	if(isset($_SESSION['users'])!="")
-	{
-		header("Location: verify.php");
-	}
+    include_once '../includes/connectDB.php';
+     
+    if(isset($_SESSION['users'])!="")
+    {
+        header("Location: verify.php");
+    }
+     
+    $sql = 'SELECT user_id, fname, lname, username, email, DOB, phone FROM users';
+    mysql_select_db ('../dbtest');
+    $retval = mysql_query($sql, $conn);
+    //shows user info on the table
+    $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+    $row=mysql_fetch_array($res);   
+    // shows the username on the right of the navbar
+    $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+    $userRow=mysql_fetch_array($res);
 	
 	$sql = 'SELECT user_id, fname, lname, username, email, DOB, phone FROM users';
 	$sql2 = 'SELECT taxi_reg FROM user_history';
 	mysql_select_db ('../dbtest');
 	$retval = mysql_query($sql, $conn);
 	$retval = mysql_query($sql2, $conn);
-	
-	//shows user info on the table
-	$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-	$row=mysql_fetch_array($res);	
 	
 	//get user history
 		$ret=mysql_query("SELECT * FROM user_history WHERE user_id=".$_SESSION['user']);
@@ -46,6 +52,8 @@
 	<link rel="icon" href="../images/BoboLogo2.ico">
 	<!-- Bootstrap core CSS -->
 	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/instructions.css" rel="stylesheet">
+	
 	
 </head>
 
@@ -58,33 +66,34 @@
 	</script>
 
 	<!--this is the code for the navbar-->
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    	<div class="container-fluid">
-        	<div class="navbar-header">
-            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-	            	<span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-				<a class="navbar-brand" href="verify.php">BoBo</a>
-			</div>
+                <a class="navbar-brand" href="verify.php"> BoBo</a>
+            </div>
             <div class="collapse navbar-collapse collapse" id="navbar">
-	        	<ul class="nav navbar-nav navbar-left">
-	              	<li><a href="verify.php">Home</a></li>
-		            <li class="active"><a href="account.php">Account</a></li>
-		            <li><a href="settings.php">Settings</a></li>
-	            </ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
-						</ul>
-					</li>
-				</ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="verify.php">Home</a></li>
+                    <li class="active"><a href="account.php">Account</a></li>
+                    <li><a href="settings.php">Settings</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="button" href="#popup1">Help</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
+                            </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-	</nav>
+    </nav>
 	
 	<div class="container">
 		<div class="jumbotron">
@@ -150,6 +159,42 @@
 			</div>
 		</div>
 	</nav>
+	
+	
+	<div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Instructions</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <form id="instructions-form">
+                    <table>
+                        <tr>
+                            <td><font color = "red">Step 1:</font><br>Go to the <font color = "blue">Settings Page</font> and add the contact details of the people you want to send an email to when you get into the taxi.
+                        </tr>
+                        <tr>
+                           <td><font color = "red">Step 2:</font><br>After saving your contacts, press <font color = "blue">Continue</font> and you will be brought to the <font color = "blue">Verify Page</font>.</td>
+                        </tr>
+                        </br>
+                        <tr>
+                           <td><font color = "red">Step 3:</font><br>On the homepage you will be required to enter the taxi drivers registration number and accept him or decline him.</td>
+                        </tr>
+                        </br>
+                        <tr>
+                            <td><font color = "red">Step 4:</font><br>After accepting the taxi you will be brought to a page of contacts that you added in <font color = "blue">Step 1</font> </td>
+                        </tr>
+                        </br>
+                        <tr><td><font color = "red">Step 5:</font><br>Select the contact you want to alert that you are leaving your current destination and on the way to your next destination. </td>
+                        </tr>
+                        </br>
+                        <tr>
+                            <td><font color = "red">Step 6:</font><br>Select the contact you want to alert as you are arriving, or have arrived at your destination. </td>
+                        </tr>
+                    </table>
+                    </br>
+                </form>
+            </div>
+        </div>
+    </div>
         
     <!-- Bootstrap core JavaScript
 	================================================= -->

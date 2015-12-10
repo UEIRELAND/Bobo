@@ -1,14 +1,19 @@
 <?php
-session_start();
-include_once '../includes/connectDB.php';
-
-if(!isset($_SESSION['user']))
-{
-	header("Location: ../index.php");
-}	
-$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-$userRow=mysql_fetch_array($res);
-
+	session_start();
+    include_once '../includes/connectDB.php';
+     
+    if(isset($_SESSION['users'])!="")
+    {
+        header("Location: verify.php");
+    }
+     
+    $sql = 'SELECT user_id, fname, lname, username, email, DOB, phone FROM users';
+    mysql_select_db ('../dbtest');
+    $retval = mysql_query($sql, $conn);
+	
+    // shows the username on the right of the navbar
+    $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+    $userRow=mysql_fetch_array($res);
 ?>
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
@@ -39,10 +44,7 @@ $userRow=mysql_fetch_array($res);
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<!-- AngularJS Link---->
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-
-	<!--Own CSS-->
-	<script src="../css/search.css"></script>
-	
+	<link href="../css/instructions.css" rel="stylesheet">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
 
@@ -61,7 +63,7 @@ $userRow=mysql_fetch_array($res);
 	</script>
 
 		<!--this is the code for the navbar-->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -69,8 +71,7 @@ $userRow=mysql_fetch_array($res);
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="verify.php"> BoBo</a>
-						
+                    <a class="navbar-brand" href="verify.php">BoBo</a>
                 </div>
                 <div class="collapse navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav navbar-left">
@@ -78,19 +79,17 @@ $userRow=mysql_fetch_array($res);
                         <li><a href="account.php" data-toggle="collapse" data-target=".navbar-collapse">Account</a></li>
                         <li><a href="settings.php" data-toggle="collapse" data-target=".navbar-collapse">Settings</a></li>
                     </ul>
-					
-					<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										
-										<li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
-									</ul>
-							</li>
-						</ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="button" href="#popup1">Help</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
+                                </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-			
         </nav>
 	
 	<div class="container">
@@ -136,6 +135,41 @@ $userRow=mysql_fetch_array($res);
 			</div>
 		</div>
 	</nav>
+	
+	<div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Instructions</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <form id="instructions-form">
+                    <table>
+                        <tr>
+                            <td><font color = "red">Step 1:</font><br>Go to the <font color = "blue">Settings Page</font> and add the contact details of the people you want to send an email to when you get into the taxi.
+                        </tr>
+                        <tr>
+                           <td><font color = "red">Step 2:</font><br>After saving your contacts, press <font color = "blue">Continue</font> and you will be brought to the <font color = "blue">Verify Page</font>.</td>
+                        </tr>
+                        </br>
+                        <tr>
+                           <td><font color = "red">Step 3:</font><br>On the homepage you will be required to enter the taxi drivers registration number and accept him or decline him.</td>
+                        </tr>
+                        </br>
+                        <tr>
+                            <td><font color = "red">Step 4:</font><br>After accepting the taxi you will be brought to a page of contacts that you added in <font color = "blue">Step 1</font> </td>
+                        </tr>
+                        </br>
+                        <tr><td><font color = "red">Step 5:</font><br>Select the contact you want to alert that you are leaving your current destination and on the way to your next destination. </td>
+                        </tr>
+                        </br>
+                        <tr>
+                            <td><font color = "red">Step 6:</font><br>Select the contact you want to alert as you are arriving, or have arrived at your destination. </td>
+                        </tr>
+                    </table>
+                    </br>
+                </form>
+            </div>
+        </div>
+    </div>
         
     	<!--angluar script file-->
 	<script src="../javaScript/angular.min.js"></script>
