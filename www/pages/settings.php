@@ -1,30 +1,35 @@
 <?php
 session_start();
+include_once '../includes/connectDB.php';
+ 
 if(isset($_SESSION['contacts'])!="")
 {
-	header("Location: verify.php");
+    header("Location: verify.php");
 }
-include_once '../includes/connectDB.php';
-
+ 
 if(isset($_POST['btn-contact']))
 {
-	$cnme =  mysql_real_escape_string($_POST['cnme']);
-	$cemail =  mysql_real_escape_string($_POST['cemail']);
-	$cphone = (mysql_real_escape_string($_POST['cphone']));
-	
-	if(mysql_query("INSERT INTO contacts(contact_name,contact_email,contact_phone) VALUES('$cnme','$cemail','$cphone')"))
-	{
-		?>
-        <script>alert('Contact Saved ');</script>
+    $userid = (mysql_real_escape_string($_POST['user_id']));
+    $cnme =  mysql_real_escape_string($_POST['cnme']);
+    $cemail =  mysql_real_escape_string($_POST['cemail']);
+    $cphone = (mysql_real_escape_string($_POST['cphone']));
+     
+    $suser = $_SESSION['user'];
+     
+    if(mysql_query("INSERT INTO contacts(user_id,contact_name,contact_email,contact_phone) VALUES('$suser','$cnme','$cemail','$cphone')"))
+     {
+        ?>
+        <script>alert('Contact Saved');</script>
         <?php
-	}
-	else
-	{
-		?>
+    }
+    else
+    {
+        ?>
         <script>alert('Error saving Contact! ');</script>
         <?php
-	}
+    }
 }
+// shows the username on the right of the navbar
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
 ?>
@@ -111,6 +116,7 @@ $userRow=mysql_fetch_array($res);
 		
 			<center>
 				<div id="login-form">
+				
 				<form method="post">
 
 					<table align="center" width="100%" border="0">
@@ -124,10 +130,10 @@ $userRow=mysql_fetch_array($res);
 							<td><input type="text" name="cphone" placeholder="Contact Mobile Number" required /></td>
 						</tr>
 						<tr>
-							<td><button type="submit" name="btn-contact">Save Contact</button></td>
+						   <td><button type="submit" name="btn-contact">Save Contact</button></td>
 						</tr>
 						<tr>
-							<td><button><a href="verify.php">Continue</a></button></td>
+							<td><button><a href="verify.php">Search Taxi</a></button></td>
 						</tr>
 					</table>
 				</form>
