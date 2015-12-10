@@ -37,13 +37,6 @@
 		}
 	}
 	$suser = $_SESSION['user'];
-		
-	
-	
-	
-	
-
-
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +79,9 @@
 		<div class="jumbotron" id="text-jumbotron">
 
 			<!--table of leaving alerts-->
-			<div class="table-responsive text-table-margin">          
+			
+		<div class="table-responsive text-table-margin">  
+			<form method="post">			
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -94,17 +89,16 @@
 						</tr>
 					</thead>
 						<?php 
+						
 						foreach($contacts as $contact){
 						?>
 					<tbody>
 						<tr>
 							<td>
-								<a onclick="myClickOne()">
+								
 									<?php
-									echo  $contact['contact_name'] ; 
-									?>
-								</a>
-								<img id="TickOne" src="../images/text-tick.png" />
+									echo  "<input type='checkbox' name='contact_name' value='".$contact['contact_name']."'>"
+        .$contact['contact_name'];?>
 							</td>
 						</tr>
 					</tbody>
@@ -113,6 +107,9 @@
 						?>
 				</table>
 			</div>
+			<input type="submit" value="continue"  class="btn btn-primary btn-lg text-button" onclick="getLocation()"/>
+	
+			</form>
 						
 			<!--Submit button-->
 
@@ -120,7 +117,7 @@
 
 		
 
-			<button class="btn btn-primary btn-lg text-button" onclick="getLocation()" type="button">Continue</button>
+			<!--button class="btn btn-primary btn-lg text-button" onclick="getLocation()" type="button">Continue</button-->
 		    <script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGwJJ6jnnh4FJ07Zf79PQiBe7NXE4yKn8&signed_in=true&callback=initMap"></script>
 
