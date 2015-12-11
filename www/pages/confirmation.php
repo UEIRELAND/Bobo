@@ -106,9 +106,10 @@ if(isset($_POST['submit']))
 				<table class="table table-hover">
 				<tr><td>MY JOURNEY DETAILS</td></tr>
 				<tr><td>LOCATION: <?php echo $lat.",".$lgn; ?></td></tr>
-                <tr><td>TAXI REGISTRATION No:
-								
-				<?php echo $amountContacts = $_SESSION['mycount'];
+                <tr><td>TAXI REGISTRATION:<?php echo $_SESSION['$mydriver'];?></td><tr>
+				<tr>
+				<td>SEND EMAIL TO:			
+				<?php  $amountContacts = $_SESSION['mycount'];
 				
 				for($i=0; $i<= $amountContacts; $i++){
 					
@@ -116,7 +117,8 @@ if(isset($_POST['submit']))
 				}	
 				?>
 				
-				</td></tr>
+				</td>
+				</tr>
 	  	        </table>
 		
 		<center><img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $lat.",".$lgn; ?>&zoom=17&size=400x400&markers=color:blue|<?php echo $lat.",".$lgn; ?>&key=AIzaSyCtwsCFvP86ikM2CbVZNz23cP_1Axb9JbE"></center>
@@ -127,7 +129,7 @@ if(isset($_POST['submit']))
 		    <?php echo $msg ?>
 				<p>
 				<form action='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>' method='post'>
-				<input class="btn btn-primary btn-lg" type='submit' name='submit' value='Submit' onclick="msgHome.php" >
+				<input class="btn btn-primary btn-lg" type='submit' name='submit' value='Send Email' >
 				</form>
 				</p>
 							
