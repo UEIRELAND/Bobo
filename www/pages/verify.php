@@ -75,9 +75,9 @@
                 </div>
                 <div class="collapse navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="active"><a href="verify.php"data-toggle="collapse" data-target=".navbar-collapse">Home</a></li>
-                        <li><a href="account.php" data-toggle="collapse" data-target=".navbar-collapse">Account</a></li>
-                        <li><a href="settings.php" data-toggle="collapse" data-target=".navbar-collapse">Settings</a></li>
+                        <li class="active"><a href="verify.php">Home</a></li>
+                        <li><a href="account.php">Account</a></li>
+                        <li><a href="settings.php">Settings</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="button" href="#popup1">Help</a></li>

@@ -73,42 +73,14 @@
 	<script type="text/javascript">
 		$.backstretch(["../images/cab.jpg"]);
 	</script>
-<!--this is the code for the navbar-->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="verify.php"> BoBo</a>
-            </div>
-            <div class="collapse navbar-collapse collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="verify.php">Home</a></li>
-                    <li class="active"><a href="account.php">Account</a></li>
-                    <li><a href="settings.php">Settings</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class="button" href="#popup1">Help</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
-                            </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
 
 			<!--table of leaving alerts-->
 			
-			<div class="table-responsive text-table-margin">  
+	<div class="table-responsive text-table-margin">  
 		<form  method='get' action="confirmation.php">			
 				<table class="table table-hover">
 					<thead>
@@ -147,14 +119,6 @@
 	
 			</form>
 			</div>			
-			<!--Submit button-->
-		
-
-		
-
-		
-
-			<!--button class="btn btn-primary btn-lg text-button" onclick="getLocation()" type="button">Continue</button-->
 		    <script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGwJJ6jnnh4FJ07Zf79PQiBe7NXE4yKn8&signed_in=true&callback=initMap"></script>
 
