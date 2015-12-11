@@ -5,6 +5,7 @@ if(!isset($_SESSION['user']))
 {
 	header("Location: verify.php");
 }
+
 $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
 $userRow=mysql_fetch_array($res);
   	$lat = $_GET['lat'];
@@ -64,6 +65,7 @@ if(isset($_POST['submit']))
 	}
 	
 }
+$suser = $_SESSION['user'];
 ?>
 
 
@@ -129,10 +131,12 @@ if(isset($_POST['submit']))
 		    <?php echo $msg ?>
 				<p>
 				<form action='<?php echo htmlentities($_SERVER['PHP_SELF']); ?>' method='post'>
-				<input class="btn btn-primary btn-lg" type='submit' name='submit' value='Send Email' >
+				<input class="btn btn-primary btn-lg" type='submit' name='submit' value='Send Email'>
 				</form>
 				</p>
-							
+				
+          	
+			<a  style="color:white" type="submit" class="btn btn-primary btn-lg" href="msgHome.php?user_id=<?php echo $userRow['user_id'];?>">Continue</a>
            
 		
 		</div><!--end of jumbotron-->

@@ -29,7 +29,7 @@
 		$history = array();
 
 		while($historyrow=mysql_fetch_array($ret)){
-			$history[] = $history;
+			$history[] = $historyrow;
 		}
 	
 	
@@ -190,6 +190,7 @@
 				 </table>
                     </br>
                 </form>
+				
             </div>
         </div>
     </div>

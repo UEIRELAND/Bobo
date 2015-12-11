@@ -8,8 +8,12 @@
 		header("Location: verify.php");
 	}else{
 		if(!isset($_GET['user_id'])){
+			
 			header("Location: verify.php");
-		}
+	}
+	 // shows the username on the right of the navbar
+    $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+    $userRow=mysql_fetch_array($res);
 	
 	//adds taxi details and user_id to account history table
 	$mydriver= $_GET['taxi_reg'];
@@ -28,8 +32,8 @@
 
 		$contacts = array();
 
-		while($userRow=mysql_fetch_array($res)){
-			$contacts[] = $userRow;
+		while($contactRow=mysql_fetch_array($res)){
+			$contacts[] = $contactRow;
 		}
 	}
 	$suser = $_SESSION['user'];
@@ -69,14 +73,35 @@
 	<script type="text/javascript">
 		$.backstretch(["../images/cab.jpg"]);
 	</script>
-<script type="text/javascript">
-
-
-function runMe(){
-	var x = document.getElementById("count1").value;
-	alert("hello "+x);
-}
-</script>
+<!--this is the code for the navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="verify.php"> BoBo</a>
+            </div>
+            <div class="collapse navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="verify.php">Home</a></li>
+                    <li class="active"><a href="account.php">Account</a></li>
+                    <li><a href="settings.php">Settings</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="button" href="#popup1">Help</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $userRow['username']; ?> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>&nbsp;<a href="logout.php?logout">Sign Out</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 	<div class="container">	
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron" id="text-jumbotron">
@@ -118,7 +143,7 @@ function runMe(){
 						?>
 				</table>
 			
-			<input type='submit' value='continue' class="btn btn-primary btn-lg text-button" onclick="getLocation()" />
+			<input type='submit' value='Continue' class="btn btn-primary btn-lg text-button" onclick="getLocation()" />
 	
 			</form>
 			</div>			
